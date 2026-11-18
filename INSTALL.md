@@ -1,5 +1,8 @@
 # Install DeepSeek Chat Exporter
 
+[![Download .zip](https://img.shields.io/badge/Download-.zip-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/frontmesh/DSExporter/releases/latest/download/deepseek-chat-exporter.zip)
+[![Back to README](https://img.shields.io/badge/Back_to-README-6e7781?style=for-the-badge)](README.md)
+
 No Chrome Web Store, no account, no build step, no API key. You download a zip,
 unzip it, and point your browser at the folder once. It takes about a minute.
 
@@ -27,10 +30,9 @@ deepseek-chat-exporter/
 Do not delete or move this folder afterwards — the browser loads the extension
 from that path on every start.
 
-## 2. Open your browser's extensions page
+## 2. Open the extensions page
 
-Turn on **Developer mode** (the switch is usually top-right) and click
-**Load unpacked**.
+Copy and paste the address for your browser:
 
 | Browser | Extensions page |
 | --- | --- |
@@ -42,10 +44,20 @@ Turn on **Developer mode** (the switch is usually top-right) and click
 | Arc | `arc://extensions` (or `chrome://extensions`) |
 | Other Chromium browsers | `chrome://extensions` usually works; otherwise check the browser's menu |
 
-Select the unzipped folder — the one containing `manifest.json`, **not** its
-parent folder.
+Turn on **Developer mode** — the switch is in the top-right corner.
 
-## 3. Use it
+![Extensions page with Developer mode and Load unpacked highlighted](docs/install-extensions.png)
+
+*Brave is shown; Chrome, Edge, Vivaldi, Opera and other Chromium browsers have the same two controls.*
+
+## 3. Load the extension
+
+Click **Load unpacked** and select the unzipped folder — the one containing
+`manifest.json`, **not** its parent folder.
+
+The extension appears in the list immediately; no restart is needed.
+
+## 4. Use it
 
 1. Open a conversation at [chat.deepseek.com](https://chat.deepseek.com/).
 2. If that tab was already open before installing, **reload it once**. The
