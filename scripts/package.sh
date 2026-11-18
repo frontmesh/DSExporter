@@ -16,5 +16,10 @@ node -e "const m=require('$EXTENSION/manifest.json'); if(m.manifest_version!==3)
 cd "$EXTENSION"
 zip -qr "$OUT" . -x '*.DS_Store' '*.map'
 
+# Stable alias so the "latest release" download link in the README keeps
+# working across versions.
+cp "$OUT" "$DIST/deepseek-chat-exporter.zip"
+
 echo "Built $OUT"
+echo "Stable copy: $DIST/deepseek-chat-exporter.zip"
 unzip -l "$OUT" | tail -n 4

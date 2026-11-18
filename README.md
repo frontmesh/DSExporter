@@ -1,6 +1,6 @@
 # DeepSeek Chat Exporter
 
-A Brave (and Chrome/Chromium) extension that turns the DeepSeek conversation you have open into a clean Markdown **summary** — then opens the native **Save As** dialog so you choose exactly where the `.md` file goes.
+A Chromium browser extension (Chrome, Brave, Edge, Vivaldi, Opera, Arc, …) that turns the DeepSeek conversation you have open into a clean Markdown **summary** — then opens the native **Save As** dialog so you choose exactly where the `.md` file goes.
 
 Nothing is uploaded to a third party. There is no API key, no account, no analytics, and no server component.
 
@@ -18,15 +18,19 @@ Nothing is uploaded to a third party. There is no API key, no account, no analyt
 
 Example output: [docs/example-export.md](docs/example-export.md)
 
-## Install in Brave
+## Install (no store needed)
 
-1. Download or clone this repository.
-2. Open `brave://extensions`.
-3. Turn on **Developer mode** (top-right).
-4. Click **Load unpacked**.
-5. Select the [`extension/`](extension/) folder itself — the one containing `manifest.json`, **not** the repository root.
-6. Open a conversation on [chat.deepseek.com](https://chat.deepseek.com/).
-7. Click the download-bubble icon in the toolbar, or press **Alt+Shift+D** on Windows/Linux or **Option+Shift+D** on macOS.
+**[Download the latest `.zip`](https://github.com/frontmesh/DSExporter/releases/latest/download/deepseek-chat-exporter.zip)** · [releases](https://github.com/frontmesh/DSExporter/releases)
+
+No Chrome Web Store listing, account, or build step is required. It runs in any Chromium browser — Chrome, Brave, Microsoft Edge, Vivaldi, Opera, Arc, and similar — version 116 or newer. Firefox and Safari are not supported.
+
+1. Unzip the download. The folder must contain `manifest.json` directly inside it.
+2. Open your browser's extensions page — `chrome://extensions`, `brave://extensions`, `edge://extensions`, etc. — and turn on **Developer mode**.
+3. Click **Load unpacked** and select the unzipped folder (the one with `manifest.json`, **not** its parent).
+4. Open a conversation on [chat.deepseek.com](https://chat.deepseek.com/). If the tab was already open, reload it once.
+5. Pin the extension, then click its icon or press **Alt+Shift+D** on Windows/Linux (Option+Shift+D on macOS).
+
+Keep the unzipped folder where it is: the browser loads the extension from that path at every start. Per-browser steps, updating, and troubleshooting are in [INSTALL.md](INSTALL.md).
 
 After updating or reinstalling the extension, reload an already-open DeepSeek tab once. The popup can inject the content script into a tab that was open before installation, but reloading is the most reliable path.
 
@@ -40,9 +44,9 @@ After updating or reinstalling the extension, reload an already-open DeepSeek ta
    - **Detailed** — more key points and a longer turn-by-turn outline.
 4. Optionally enable **Include full transcript** and **Include reasoning**.
 5. Click **Export summary (.md)**.
-6. Choose a location in the Brave/Chrome Save As dialog.
+6. Choose a location in the browser's Save As dialog.
 
-The extension also includes a **Save As** prompt if Chrome/Brave is configured to download automatically; `saveAs: true` is passed explicitly.
+The extension also includes a **Save As** prompt if your browser is configured to download automatically; `saveAs: true` is passed explicitly.
 
 ## What “summary” means
 
@@ -86,13 +90,13 @@ This keeps the extension private, instant and API-key-free, but it is not an abs
 
 ## Development
 
-Requirements: Node.js 20+ and Brave or Chrome. The integration test looks for Brave in the usual macOS/Linux/Windows locations; set `BRAVE_PATH` to override the executable path.
+Requirements: Node.js 20+ and a Chromium browser. The integration test looks for Brave in the usual macOS/Linux/Windows locations; set `BRAVE_PATH` to override the executable path.
 
 ```bash
 npm install
 npm test          # unit tests
 npm run test:e2e  # Brave integration test against a mocked DeepSeek page
-npm run package   # builds dist/deepseek-chat-exporter-1.0.0.zip
+npm run package   # builds dist/deepseek-chat-exporter-1.0.0.zip (+ stable alias)
 ```
 
 The integration test covers:
