@@ -17,7 +17,7 @@ No Chrome Web Store. No account. No API key. Nothing is uploaded.
 
 ![DeepSeek Chat Exporter popup](docs/popup.png)
 
-Works in **Chrome, Brave, Microsoft Edge, Vivaldi, Opera, Arc** and other Chromium browsers (version 116 or newer). Firefox and Safari are not supported.
+Works in desktop **Chrome, Brave, Microsoft Edge, Vivaldi, Opera, Arc** and other Chromium browsers (version 116 or newer). Firefox and Safari are not supported.
 
 ## Install in 60 seconds
 
@@ -143,6 +143,12 @@ The extension does not request access to any other site.
 <summary><strong>Do I need an API key or a DeepSeek developer account?</strong></summary>
 
 No. The extension uses the DeepSeek session already active in your browser. There is nothing to configure.
+</details>
+
+<details>
+<summary><strong>Does it work on a phone or tablet?</strong></summary>
+
+No. Chrome, Brave, Edge and other Chromium browsers on Android and iOS do not support desktop-style extensions. It is a desktop browser extension.
 </details>
 
 <details>

@@ -6,9 +6,9 @@
 No Chrome Web Store, no account, no build step, no API key. You download a zip,
 unzip it, and point your browser at the folder once. It takes about a minute.
 
-The extension works in **Chromium-based browsers** — Chrome, Brave, Microsoft
+The extension works in **desktop Chromium-based browsers** — Chrome, Brave, Microsoft
 Edge, Vivaldi, Opera, Arc, Thorium, Ungoogled Chromium, and similar — version
-**116 or newer**. Firefox and Safari are not supported.
+**116 or newer**. Firefox, Safari, and mobile browsers are not supported.
 
 ## 1. Download and unzip
 
